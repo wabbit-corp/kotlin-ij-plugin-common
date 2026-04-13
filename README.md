@@ -84,7 +84,7 @@ That leaves the plugin-specific module responsible only for its descriptor value
 
 ## Source Compatibility
 
-- JVM target: 17
+- JVM target: 21
 - IntelliJ Community SDK archive used for compile/test classpaths: `2025.3`
 - Bundled Kotlin IDE plugin jars added to the compile/test classpath: `org.jetbrains.kotlin`
 
