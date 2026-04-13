@@ -11,4 +11,5 @@ Add repo-specific instructions above or below the managed facts block. Keep manu
 - Setup-managed files are regenerated with `dev setup kotlin-ij-plugin-common`; avoid hand-editing stamped generated files.
 - Sanctioned override files in this repo: `build.extra.gradle.kts`, `settings.local.gradle.kts`.
 - Configured project types: `kotlin/jvm`. Docs: `dokka`.
+- Repo reference docs: `CHANGELOG.md`.
 <!-- END app-wabbit-dev managed facts -->
