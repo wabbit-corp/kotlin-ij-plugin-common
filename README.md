@@ -12,7 +12,7 @@ It is not intended as a normal end-user dependency. End users should install or 
 
 ## Coordinates
 
-- library artifact: `one.wabbit:kotlin-ij-plugin-common:0.0.1`
+- library artifact: `one.wabbit:kotlin-ij-plugin-common:0.1.0`
 
 ## Status
 
@@ -36,11 +36,11 @@ This library is meant for IntelliJ plugin implementation projects:
 
 ```kotlin
 dependencies {
-    implementation("one.wabbit:kotlin-ij-plugin-common:0.0.1")
+    implementation("one.wabbit:kotlin-ij-plugin-common:0.1.0")
 }
 ```
 
-The generated build already brings in the IntelliJ Platform Gradle plugin and the IntelliJ/Kotlin IDE surfaces needed by the shared code.
+The generated build for this shared library is a plain JVM build. It compiles against the IntelliJ Community SDK plus the bundled Kotlin IDE plugin jars, but it does not apply the IntelliJ Platform Gradle plugin itself.
 
 ## Quick Start
 
@@ -77,7 +77,7 @@ That leaves the plugin-specific module responsible only for its descriptor value
 ## Documentation
 
 - [API reference](docs/api-reference.md)
-- API docs are currently generated locally with `./gradlew dokkaGenerate`, then published from `build/dokka/html/index.html`.
+- API docs are currently generated locally with `./gradlew dokkaGeneratePublicationHtml`, then published from `build/dokka/html/index.html`.
 - Main source entry points:
   - [`src/main/kotlin/one/wabbit/ijplugin/common/ConfiguredCompilerPluginSupport.kt`](src/main/kotlin/one/wabbit/ijplugin/common/ConfiguredCompilerPluginSupport.kt)
   - [`src/main/kotlin/one/wabbit/ijplugin/common/ConfiguredIdeSupport.kt`](src/main/kotlin/one/wabbit/ijplugin/common/ConfiguredIdeSupport.kt)
@@ -85,8 +85,8 @@ That leaves the plugin-specific module responsible only for its descriptor value
 ## Source Compatibility
 
 - JVM target: 17
-- IntelliJ Platform target in the generated build: `2025.3`
-- Bundled Kotlin plugin dependency in the generated build: `org.jetbrains.kotlin`
+- IntelliJ Community SDK archive used for compile/test classpaths: `2025.3`
+- Bundled Kotlin IDE plugin jars added to the compile/test classpath: `org.jetbrains.kotlin`
 
 ## Release Notes
 

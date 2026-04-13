@@ -11,10 +11,10 @@ The main public surfaces live in:
 - [`IdeSupport.kt`](../src/main/kotlin/one/wabbit/ijplugin/common/IdeSupport.kt)
 - [`IdeSupportAutoRescan.kt`](../src/main/kotlin/one/wabbit/ijplugin/common/IdeSupportAutoRescan.kt)
 
-For rendered API docs, run:
+Rendered API docs are currently local-only for this repo. To build them, run:
 
 ```bash
-./gradlew dokkaGenerate
+./gradlew dokkaGeneratePublicationHtml
 ```
 
 Then open:
