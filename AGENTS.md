@@ -10,6 +10,7 @@ Add repo-specific instructions above or below the managed facts block. Keep manu
 - Canonical repo target: `kotlin-ij-plugin-common`. Useful entrypoints: `dev project show kotlin-ij-plugin-common`, `dev build kotlin-ij-plugin-common`, `dev check kotlin-ij-plugin-common`.
 - Setup-managed files are regenerated with `dev setup kotlin-ij-plugin-common`; avoid hand-editing stamped generated files.
 - Sanctioned override files in this repo: `build.extra.gradle.kts`, `settings.local.gradle.kts`.
+- Review `kotlin-conventions.md` before editing Kotlin code in this repo.
 - Configured project types: `kotlin/jvm`. Docs: `dokka`.
 - Repo reference docs: `CHANGELOG.md`.
 <!-- END app-wabbit-dev managed facts -->
